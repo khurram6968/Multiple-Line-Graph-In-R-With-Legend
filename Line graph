@@ -1,0 +1,8 @@
+ggplot()+
+  geom_line(aes(p1$city_name,p1$total_pop,group=1,col="Minority"),size=1.5)+
+  geom_point(aes(p1$city_name,p1$total_pop),size=2)+
+  geom_line(aes(p2$city_name,p2$total_pop,group=1,col="Majority"),size=1.5)+
+  geom_point(aes(p2$city_name,p2$total_pop),size=2)+
+  theme(axis.text.x = element_text(angle = 45,hjust=1,size = 12))+
+  scale_color_manual(name="Status",values = c(Minority="darkgreen",Majority="red"))+
+  xlab("City Name")+ylab("Total Popluation")
